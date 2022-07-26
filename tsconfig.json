@@ -3,11 +3,13 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "strictNullChecks": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "suppressExcessPropertyErrors": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -16,6 +18,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
+    "noImplicitAny": false
   },
   "include": ["src"]
 }
