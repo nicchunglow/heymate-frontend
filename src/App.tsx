@@ -5,7 +5,7 @@ import Routes from 'routes';
 const App = () => {
   return (
     <div data-testid="app">
-      <Routes />;
+      <Routes />
     </div>
   );
 };
