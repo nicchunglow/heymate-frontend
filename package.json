@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "testWatch": "react-scripts test --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "prettierCheck": "prettier --check .",
