@@ -38,7 +38,7 @@ const CardDiv = styled.div<CardProps>`
     font-size: 0.7em;
   }
   @media ${device?.tablet} {
-    width: ${(props) => props?.width || '90vw'};
+    width: ${(props) => props?.width || '50vw'};
     font-size: 1em;
   }
 `;

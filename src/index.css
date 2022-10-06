@@ -11,11 +11,17 @@ code {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 500;
   color: #1c1c1c
 }
 
 h1 {
+  color: #1c1c1c;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+h2 {
   color: #1c1c1c;
   font-weight: bold;
   font-size: 40px;

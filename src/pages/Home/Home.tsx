@@ -10,7 +10,7 @@ const StyledWorkshopContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0px 0px 0px;
+  overflow-y: scroll;
 `;
 const Home: React.FC = () => {
   const mockWorkShopData = [
@@ -35,6 +35,7 @@ const Home: React.FC = () => {
   ];
   return (
     <StyledWorkshopContainer>
+      <h1>Workshops</h1>
       {mockWorkShopData.map((workshop) => {
         return (
           <Card
@@ -43,7 +44,7 @@ const Home: React.FC = () => {
             justifyContent={'space-around'}
             background={theme.primaryOrange}
           >
-            <h1>{workshop?.title}</h1>
+            <h2>{workshop?.title}</h2>
             <span>
               <p>{workshop?.description}</p>
               <p>{workshop?.cost}</p>
