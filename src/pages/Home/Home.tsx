@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           <Card
             key={workshop?.id}
             aria-label={`workshop-${workshop?.id}`}
-            justifyContent={`space-around`}
+            justifyContent={'space-around'}
             background={theme.primaryOrange}
           >
             <h1>{workshop?.title}</h1>

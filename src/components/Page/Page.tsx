@@ -1,7 +1,6 @@
 import theme from 'constant/theme.constant';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import { device } from 'constant/device.constant';
 
 type PageProps = {
   children: ReactNode;
@@ -17,7 +16,7 @@ type PageProps = {
   testId?: string;
 };
 
-const PageDiv = styled.div<PageProps>`
+const PageDiv: React.FC = styled.div<PageProps>`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props?.background || theme.primaryWhite};
