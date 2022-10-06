@@ -3,6 +3,7 @@ import theme from 'constant/theme.constant';
 import styled from 'styled-components';
 import Menu from '../../assets/Header/menu.svg';
 import Button from 'components/Button';
+import { device } from 'constant/device.constant';
 
 type HeaderProps = {
   background?: string;
@@ -28,6 +29,16 @@ const HeaderDiv = styled.div<HeaderProps>`
   padding: ${(props) => props?.padding || '0'};
   justify-content: ${(props) => props?.justifyContent || 'center'};
   align-items: ${(props) => props?.alignItems || 'center'};
+  @media ${device?.mobileM} {
+    width: ${(props) => props?.width || '90vw'};
+    font-size: 20px;
+  }
+  @media ${device?.tablet} {
+    width: ${(props) => props?.width || '100vw'};
+    h2 {
+      font-size: 20px;
+    }
+  }
 `;
 
 const Header: React.FC = (props: HeaderProps) => {
@@ -37,7 +48,7 @@ const Header: React.FC = (props: HeaderProps) => {
       <HeaderDiv data-testid={testId || 'header-inner-container'} width="95%" justifyContent={'space-between'}>
         <h2>Hi User</h2>
         <Button>
-          <img src={Menu} />
+          <img src={Menu} width="30px" />
         </Button>
       </HeaderDiv>
     </HeaderDiv>
