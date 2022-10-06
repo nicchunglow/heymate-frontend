@@ -29,18 +29,16 @@ const CardDiv = styled.div<CardProps>`
   border-radius: ${(props) => props?.borderRadius || '10px'};
   color: ${(props) => props?.color || 'black'};
   margin: ${(props) => props?.margin || '10px'};
-  padding: ${(props) => props?.padding || '0'};
+  padding: ${(props) => props?.padding || '0 10px'};
   justify-content: ${(props) => props?.justifyContent || 'center'};
   align-items: ${(props) => props?.alignItems || 'center'};
   font-size: 0.5em;
   @media ${device?.mobileM} {
     width: ${(props) => props?.width || '90vw'};
-    margin: 10px;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   @media ${device?.tablet} {
     width: ${(props) => props?.width || '90vw'};
-    margin: 10px;
     font-size: 1em;
   }
 `;

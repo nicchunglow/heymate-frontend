@@ -17,7 +17,7 @@ type HeaderProps = {
 
 const HeaderDiv = styled.div<HeaderProps>`
   display: flex;
-  background-color: ${(props) => props?.background || theme.primaryGrey};
+  background-color: ${(props) => props?.background || theme.primaryWhite};
   width: ${(props) => props?.width || '100%'};
   height: ${(props) => props?.height || '10vh'};
   color: ${(props) => props?.color || 'black'};

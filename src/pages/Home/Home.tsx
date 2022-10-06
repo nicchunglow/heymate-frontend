@@ -5,11 +5,12 @@ import Card from 'components/Card';
 
 const StyledWorkshopContainer = styled.div`
   background: ${theme.primaryWhite};
-  width: 90%;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 0px 0px 0px;
 `;
 const Home: React.FC = () => {
   const mockWorkShopData = [
@@ -40,10 +41,8 @@ const Home: React.FC = () => {
             key={workshop?.id}
             aria-label={`workshop-${workshop?.id}`}
             justifyContent={`space-around`}
-            background={theme.primaryYellow}
-            boxShadow={`5px 5px 10px ${theme.primaryGrey}`}
+            background={theme.primaryOrange}
           >
-            <img src="https://picsum.photos/50" />
             <h1>{workshop?.title}</h1>
             <span>
               <p>{workshop?.description}</p>
