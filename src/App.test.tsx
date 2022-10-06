@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const app = screen.getByTestId('app');
+  const app = screen.getByTestId('root-page');
   expect(app).toBeInTheDocument();
 });

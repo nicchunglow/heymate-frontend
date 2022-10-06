@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'constant/theme.constant';
 import Card from 'components/Card';
-import Page from 'components/Page';
 
 const StyledWorkshopContainer = styled.div`
   background: ${theme.primaryWhite};
@@ -34,28 +33,26 @@ const Home: React.FC = () => {
     },
   ];
   return (
-    <Page>
-      <StyledWorkshopContainer>
-        {mockWorkShopData.map((workshop) => {
-          return (
-            <Card
-              key={workshop?.id}
-              aria-label={`workshop-${workshop?.id}`}
-              justifyContent={`space-around`}
-              background={theme.primaryYellow}
-              boxShadow={`5px 5px 10px ${theme.primaryGrey}`}
-            >
-              <img src="https://picsum.photos/50" />
-              <h1>{workshop?.title}</h1>
-              <span>
-                <p>{workshop?.description}</p>
-                <p>{workshop?.cost}</p>
-              </span>
-            </Card>
-          );
-        })}
-      </StyledWorkshopContainer>
-    </Page>
+    <StyledWorkshopContainer>
+      {mockWorkShopData.map((workshop) => {
+        return (
+          <Card
+            key={workshop?.id}
+            aria-label={`workshop-${workshop?.id}`}
+            justifyContent={`space-around`}
+            background={theme.primaryYellow}
+            boxShadow={`5px 5px 10px ${theme.primaryGrey}`}
+          >
+            <img src="https://picsum.photos/50" />
+            <h1>{workshop?.title}</h1>
+            <span>
+              <p>{workshop?.description}</p>
+              <p>{workshop?.cost}</p>
+            </span>
+          </Card>
+        );
+      })}
+    </StyledWorkshopContainer>
   );
 };
 

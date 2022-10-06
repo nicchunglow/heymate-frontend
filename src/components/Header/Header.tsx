@@ -1,10 +1,8 @@
 import theme from 'constant/theme.constant';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import { device } from 'constant/device.constant';
 
-type PageProps = {
-  children: ReactNode;
+type HeaderProps = {
   background?: string;
   color?: string;
   width?: string;
@@ -17,12 +15,11 @@ type PageProps = {
   testId?: string;
 };
 
-const PageDiv = styled.div<PageProps>`
+const HeaderDiv = styled.div<HeaderProps>`
   display: flex;
-  flex-direction: column;
-  background-color: ${(props) => props?.background || theme.primaryWhite};
+  background-color: ${(props) => props?.background || theme.primaryGrey};
   width: ${(props) => props?.width || '100%'};
-  height: ${(props) => props?.height || '100vh'};
+  height: ${(props) => props?.height || '10vh'};
   color: ${(props) => props?.color || 'black'};
   margin: ${(props) => props?.margin || '0'};
   padding: ${(props) => props?.padding || '0'};
@@ -30,13 +27,9 @@ const PageDiv = styled.div<PageProps>`
   align-items: ${(props) => props?.alignItems || 'center'};
 `;
 
-const Page = (props: PageProps) => {
-  const { children, testId } = props;
-  return (
-    <PageDiv data-testid={testId || 'page'} {...props}>
-      {children}
-    </PageDiv>
-  );
+const Header = (props: HeaderProps) => {
+  const { testId } = props;
+  return <HeaderDiv data-testid={testId || 'page'} {...props} />;
 };
 
-export default Page;
+export default Header;
