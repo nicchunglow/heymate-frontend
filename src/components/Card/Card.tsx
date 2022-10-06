@@ -1,6 +1,7 @@
 import theme from 'constant/theme.constant';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
+import { device } from 'constant/device.constant';
 
 type CardProps = {
   children: ReactNode;
@@ -19,19 +20,29 @@ type CardProps = {
 };
 
 const CardDiv = styled.div<CardProps>`
+  border: none;
+  display: flex;
   background-color: ${(props) => props?.background || theme.primaryWhite};
   box-shadow: ${(props) => props?.boxShadow};
-  width: ${(props) => props?.width || '100%'};
-  height: ${(props) => props?.height || '56px'};
+  width: ${(props) => props?.width || '90%'};
+  height: ${(props) => props?.height || '10vh'};
   border-radius: ${(props) => props?.borderRadius || '10px'};
-  border: none;
   color: ${(props) => props?.color || 'black'};
-  margin: ${(props) => props?.margin || '0'};
+  margin: ${(props) => props?.margin || '10px'};
   padding: ${(props) => props?.padding || '0'};
-  display: flex;
   justify-content: ${(props) => props?.justifyContent || 'center'};
   align-items: ${(props) => props?.alignItems || 'center'};
-  float: ${(props) => props?.float};
+  font-size: 0.5em;
+  @media ${device?.mobileM} {
+    width: ${(props) => props?.width || '90vw'};
+    margin: 10px;
+    font-size: 0.8em;
+  }
+  @media ${device?.tablet} {
+    width: ${(props) => props?.width || '90vw'};
+    margin: 10px;
+    font-size: 1em;
+  }
 `;
 
 const Card = (props: CardProps) => {

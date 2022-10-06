@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'constant/theme.constant';
 import Card from 'components/Card';
+import { device } from 'constant/device.constant';
 
 const StyledCardContainer = styled.div`
   background: ${theme.primaryWhite};
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   overflow: scroll;
 `;
 const Home: React.FC = () => {
@@ -25,13 +25,13 @@ const Home: React.FC = () => {
       id: 2,
       title: 'Workshop 2',
       description: 'Waacking Beginner',
-      subDescription: '$30/pax',
+      cost: '$30/pax',
     },
     {
       id: 3,
-      title: 'Workshop 2',
+      title: 'Workshop 3',
       description: 'Waacking Beginner',
-      subDescription: '$30/pax',
+      cost: '$30/pax',
     },
   ];
   return (
@@ -41,13 +41,11 @@ const Home: React.FC = () => {
           <Card
             key={workshop?.id}
             aria-label={`workshop-${workshop?.id}`}
-            width="40vw"
-            height="20vh"
             justifyContent={`space-around`}
             background={theme.primaryYellow}
             boxShadow={`5px 5px 10px ${theme.primaryGrey}`}
-            margin="10px"
           >
+            <img src="https://picsum.photos/50" />
             <h1>{workshop?.title}</h1>
             <span>
               <p>{workshop?.description}</p>

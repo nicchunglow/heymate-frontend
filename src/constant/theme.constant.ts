@@ -5,4 +5,5 @@ const theme = {
   primaryBlue: '#2E5895',
   alert: '#c23b21',
 };
+
 export default theme;
