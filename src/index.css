@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, 'Helvetica', sans-serif;
+  font-family: -apple-system, 'Helvetica neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,18 +11,16 @@ code {
 }
 
 p {
-  font-weight: 500;
-  color: #1c1c1c
+  font-weight: 300;
+  color: #1c1c1c;
 }
 
 h1 {
   color: #1c1c1c;
   font-weight: bold;
-  font-size: 60px;
 }
 
 h2 {
   color: #1c1c1c;
   font-weight: bold;
-  font-size: 40px;
 }

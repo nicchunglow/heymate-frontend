@@ -29,26 +29,23 @@ const HeaderDiv = styled.div<HeaderProps>`
   padding: ${(props) => props?.padding || '0'};
   justify-content: ${(props) => props?.justifyContent || 'center'};
   align-items: ${(props) => props?.alignItems || 'center'};
+  border: ${(props) => props?.border};
   @media ${device?.mobileM} {
-    width: ${(props) => props?.width || '90vw'};
-    font-size: 20px;
+    width: ${(props) => props?.width || '100vw'};
   }
   @media ${device?.tablet} {
     width: ${(props) => props?.width || '100vw'};
-    h2 {
-      font-size: 20px;
-    }
   }
 `;
 
 const Header: React.FC = (props: HeaderProps) => {
   const { testId } = props;
   return (
-    <HeaderDiv data-testid={testId || 'header-container'}>
+    <HeaderDiv data-testid={testId || 'header-container'} border="1px solid">
       <HeaderDiv data-testid={testId || 'header-inner-container'} width="95%" justifyContent={'space-between'}>
         <h2>Hi User</h2>
         <Button>
-          <img src={Menu} width="30px" />
+          <img src={Menu} width="25px" />
         </Button>
       </HeaderDiv>
     </HeaderDiv>
