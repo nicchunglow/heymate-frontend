@@ -45,7 +45,7 @@ const Header: React.FC = (props: HeaderProps) => {
       <HeaderDiv data-testid={testId || 'header-inner-container'} width="95%" justifyContent={'space-between'}>
         <h2>Hi User</h2>
         <Button>
-          <img src={Menu} width="30px" />
+          <img src={Menu} width="25px" />
         </Button>
       </HeaderDiv>
     </HeaderDiv>
