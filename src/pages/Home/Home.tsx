@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'constant/theme.constant';
 import Card from 'components/Card';
+import { device } from 'constant/device.constant';
 
 const StyledWorkshopContainer = styled.div`
   background: ${theme.primaryWhite};
@@ -11,7 +12,28 @@ const StyledWorkshopContainer = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+  @media ${device?.mobileM} {
+    h1 {
+      font-size: 4em;
+    }
+  }
+  @media ${device?.tablet} {
+    h1 {
+      font-size: 5em;
+    }
+  }
+  @media ${device?.laptop} {
+    h1 {
+      font-size: 6em;
+    }
+  }
 `;
+
+const StyledTitle = styled.h1`
+  font-size: 50px;
+  margin: 10px 0;
+`;
+
 const Home: React.FC = () => {
   const mockWorkShopData = [
     {
@@ -33,9 +55,10 @@ const Home: React.FC = () => {
       cost: '$30/pax',
     },
   ];
+
   return (
     <StyledWorkshopContainer>
-      <h1>Workshops</h1>
+      <StyledTitle>Workshops</StyledTitle>
       {mockWorkShopData.map((workshop) => {
         return (
           <Card
